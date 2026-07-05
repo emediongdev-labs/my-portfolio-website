@@ -2047,3 +2047,419 @@ footer {
     
 }
 
+/* ==========================
+   PLANNER HERO
+========================== */
+
+#planner-hero{
+    padding:100px 0 60px;
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #F8FAFC,
+        #EEF4FF,
+        #FFFFFF
+    );
+}
+
+#planner-hero h1{
+
+    color:var(--primary-color);
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+#planner-hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:var(--light-text);
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+#planner-dashboard{
+
+    padding:60px 0;
+
+    background:var(--background-color);
+
+}
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.dashboard-card{
+
+    background:var(--surface-color);
+
+    padding:35px;
+
+    border-radius:var(--border-radius);
+
+    text-align:center;
+
+    box-shadow:var(--shadow-md);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.dashboard-card h3{
+
+    color:var(--secondary-color);
+
+    margin-bottom:15px;
+
+}
+
+.dashboard-card p{
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+    color:var(--primary-color);
+
+}
+
+.dashboard-icon {
+    
+    font-size: 2.6rem;
+    
+    margin-bottom: 18px;
+    
+    transition:
+        transform .35s ease;
+    
+}
+
+.dashboard-card:hover .dashboard-icon {
+    
+    transform: scale(1.15);
+    
+}
+
+/* ==========================
+   ADD TASK
+========================== */
+
+#add-task{
+
+    padding:100px 0;
+
+    background:#fff;
+
+}
+
+#add-task h2{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+    color:var(--primary-color);
+
+}
+
+#taskForm{
+
+    max-width:800px;
+
+    margin:auto;
+
+    background:var(--surface-color);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.form-group{
+
+    margin-bottom:25px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:var(--primary-color);
+
+}
+
+.form-group input,
+
+.form-group select{
+
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:10px;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus,
+
+.form-group select:focus{
+
+    outline:none;
+
+    border-color:var(--secondary-color);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+#taskForm button{
+
+    width:100%;
+
+    margin-top:10px;
+
+}
+
+/* ==========================
+   TASK LIST
+========================== */
+
+#task-list{
+
+    padding:100px 0;
+
+    background:var(--background-color);
+
+}
+
+#task-list h2{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+#tasksContainer {
+    
+    display: grid;
+    
+    gap: 30px;
+    
+    max-width: 850px;
+    
+    margin: auto;
+    
+}
+
+/* ==========================
+   TASK CARD
+========================== */
+
+.task-card {
+    
+    background: var(--surface-color);
+    
+    padding: 30px;
+    
+    border-radius: 18px;
+    
+    border: 1px solid rgba(37, 99, 235, .08);
+    
+
+    border-left: 6px solid var(--secondary-color);
+    
+    
+    box-shadow: var(--shadow-md);
+    
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+    
+}
+
+.task-card:hover {
+    
+    transform: translateY(-8px);
+    
+    box-shadow: var(--shadow-lg);
+    
+}
+
+.task-header {
+    
+    display: flex;
+    
+    justify-content: space-between;
+    
+    align-items: center;
+    
+    margin-bottom: 25px;
+    
+}
+
+.course-badge {
+    
+    background: rgba(37, 99, 235, .10);
+    
+    color: var(--secondary-color);
+    
+    padding: 8px 16px;
+    
+    border-radius: 50px;
+    
+    font-size: .9rem;
+    
+    font-weight: 600;
+    
+}
+
+.priority {
+    
+    padding: 8px 14px;
+    
+    border-radius: 50px;
+    
+    font-size: .85rem;
+    
+    font-weight: 600;
+    
+}
+
+.priority.high {
+    
+    background: #FEE2E2;
+    
+    color: #DC2626;
+    
+}
+
+.priority.medium {
+    
+    background: #FEF3C7;
+    
+    color: #B45309;
+    
+}
+
+.priority.low {
+    
+    background: #DCFCE7;
+    
+    color: #15803D;
+    
+}
+
+.task-card h3 {
+    
+    color: var(--primary-color);
+    
+    margin-bottom: 10px;
+    
+}
+
+.task-type {
+    
+    color: var(--secondary-color);
+    
+    font-weight: 600;
+    
+    margin-bottom: 12px;
+    
+}
+
+.task-date {
+    
+    color: var(--light-text);
+    
+    margin-bottom: 25px;
+    
+}
+
+.task-actions {
+    
+    display: flex;
+    
+    gap: 15px;
+    
+}
+
+.task-actions {
+    
+    display: flex;
+    
+    gap: 15px;
+    
+    margin-top: 25px;
+    
+}
+
+.complete-btn,
+.delete-btn {
+    
+    flex: 1;
+    
+    padding: 14px 18px;
+    
+    font-size: .95rem;
+    
+    font-weight: 600;
+    
+}
+
+.complete-btn:hover {
+    
+    background: #16A34A;
+    
+}
+
+
+.delete-btn:hover {
+    
+    background: #DC2626;
+    
+}
