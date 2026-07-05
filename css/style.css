@@ -548,108 +548,137 @@ nav a.active {
     margin: 8px 0;
 }
 
-/* ==========================
-   ABOUT PREVIEW
-========================== */
+/* ABOUT PREVIEW */
 
 #about-preview {
-  padding: 100px 0;
-  background: var(--background-color);
+    padding: 100px 0;
+    background: var(--background-color);
 }
 
 .about-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
 }
-
-.about-text {
-  flex: 1;
-}
-
-.about-description {
-  margin: 35px 0;
-  
-  color: var(--text-color);
-  
-  font-size: 1.1rem;
-  line-height: 1.9;
-}
-
-.about-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  
-  margin-bottom: 40px;
-}
-
-.about-badges span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  
-  padding: 10px 18px;
-  
-  background: var(--surface-color);
-  
-  border: 1px solid rgba(37, 99, 235, .10);
-  border-radius: 50px;
-  
-  box-shadow: var(--shadow-sm);
-  
-  font-size: .95rem;
-  font-weight: 500;
-  
-  transition:
-    transform .35s ease,
-    background .35s ease,
-    color .35s ease,
-    box-shadow .35s ease;
-}
-
-.about-badges span:hover {
-  background: var(--secondary-color);
-  color: white;
-  
-  transform: translateY(-4px);
-  
-  box-shadow: var(--shadow-md);
-}
-
 
 .about-image {
-  flex: 1;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    flex: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-image img {
-  width: 380px;
-  max-width: 100%;
-  
-  border-radius: 20px;
-  
-  box-shadow: var(--shadow-lg);
-  
-  transition:
-    transform .4s ease,
-    box-shadow .4s ease;
+    width: 400px;
+    max-width: 100%;
+    
+    border-radius: 20px;
+    
+    box-shadow: var(--shadow-lg);
+    
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        filter .45s ease;
 }
 
 .about-image img:hover {
-  transform: scale(1.04) rotate(-1deg);
-  
-  box-shadow:
-    0 25px 55px rgba(37, 99, 235, .20);
+    transform: translateY(-12px) scale(1.03);
+    
+    box-shadow: 0 35px 70px rgba(37, 99, 235, .25);
+    
+    filter: brightness(1.03);
 }
 
-/* ==========================
-   SKILLS
-========================== */
+.about-text {
+    flex: 1;
+}
+
+.about-description {
+    max-width: 620px;
+    
+    margin: 35px 0;
+    
+    color: var(--text-color);
+    
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+.about-badges {
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 15px;
+    
+    margin-bottom: 40px;
+}
+
+.about-badges span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 10px 18px;
+    
+    background: var(--surface-color);
+    
+    border: 1px solid rgba(37, 99, 235, .10);
+    
+    border-radius: 50px;
+    
+    box-shadow: var(--shadow-sm);
+    
+    font-size: .95rem;
+    font-weight: 500;
+    
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease,
+        box-shadow .35s ease;
+}
+
+.about-badges span:hover {
+    background: var(--secondary-color);
+    
+    color: white;
+    
+    transform: translateY(-4px);
+    
+    box-shadow: var(--shadow-md);
+}
+
+.about-btn {
+    display: inline-block;
+    
+    padding: 16px 34px;
+    
+    background: var(--secondary-color);
+    
+    color: white;
+    
+    border-radius: var(--border-radius);
+    
+    font-weight: 600;
+    
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+}
+
+.about-btn:hover {
+    background: #1D4ED8;
+    
+    transform: translateY(-5px);
+    
+    box-shadow: var(--shadow-lg);
+}
+
+/* SKILLS */
 
 #skills {
     background: var(--surface-color);
@@ -744,9 +773,7 @@ nav a.active {
   
 }
 
-/* ==========================
-   FEATURED PROJECTS
-========================== */
+/* FEATURED PROJECTS */
 
 #featured-projects {
   background: var(--background-color);
@@ -850,9 +877,7 @@ nav a.active {
   gap: 15px;
 }
 
-/* ==========================
-   ACADEMIC JOURNEY
-========================== */
+/* ACADEMIC JOURNEY */
 
 #academic-highlights {
 
@@ -980,9 +1005,7 @@ nav a.active {
 
 }
 
-/* ==========================
-   CONTACT CTA
-========================== */
+/* CONTACT CTA */
 
 #contact-cta {
 
@@ -1040,9 +1063,7 @@ nav a.active {
 
 }
 
-/* ==========================
-   FOOTER
-========================== */
+/* FOOTER */
 
 footer {
   
@@ -1138,9 +1159,7 @@ footer {
   
 }
 
-/* ==========================
-   ABOUT HERO
-========================== */
+/* ABOUT HERO */
 
 #about-hero {
 
@@ -1245,9 +1264,7 @@ footer {
 
 }
 
-/* ==========================
-   MY STORY
-========================== */
+/* MY STORY */
 
 #my-story {
     
@@ -1538,6 +1555,8 @@ footer {
 
 #certifications {
     
+    padding: 100px 0;
+    
     background: var(--background-color);
     
 }
@@ -1547,6 +1566,10 @@ footer {
     display: grid;
     
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    
+    gap: 30px;
+    
+    margin-top: 60px;
     
 }
 
@@ -1578,7 +1601,15 @@ footer {
     
 }
 
-
+.certification-card .card-icon {
+    
+    font-size: 2.8rem;
+    
+    margin-bottom: 20px;
+    
+    transition: transform .35s ease;
+    
+}
 
 .certification-card:hover .card-icon {
     
@@ -1586,22 +1617,13 @@ footer {
     
 }
 
-.certification-card .card-icon {
-    
-    font-size: 2.8rem;
-    
-    margin-bottom: 20px;
-    
-}
-
-
 .certification-card h3 {
     
     color: var(--secondary-color);
     
-    margin-bottom: 18px;
-    
     font-size: 1.3rem;
+    
+    margin-bottom: 18px;
     
 }
 
@@ -1800,3 +1822,228 @@ footer {
     line-height: 1.8;
 
 }
+
+/* PROJECTS HERO */
+
+#projects-hero {
+
+    background: linear-gradient(
+        135deg,
+        #F8FAFC,
+        #EEF4FF,
+        #FFFFFF
+    );
+
+    text-align: center;
+
+}
+
+.page-tag {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    background: rgba(37,99,235,.08);
+
+    color: var(--secondary-color);
+
+    border-radius: 50px;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+#projects-hero h1 {
+
+    font-size: 4rem;
+
+    color: var(--primary-color);
+
+    margin: 25px 0;
+
+}
+
+.hero-description {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    color: var(--light-text);
+
+    font-size: 1.15rem;
+
+    line-height: 1.9;
+
+}
+
+/* PROJECT SHOWCASE */
+
+.project-showcase {
+    
+    padding: 100px 0;
+    
+    background: var(--surface-color);
+    
+}
+
+.project-showcase:nth-child(even) {
+    
+    background: var(--background-color);
+    
+}
+
+.project-number {
+    
+    color: var(--secondary-color);
+    
+    font-size: .9rem;
+    
+    font-weight: 700;
+    
+    letter-spacing: 2px;
+    
+    text-transform: uppercase;
+    
+    margin-bottom: 10px;
+    
+}
+
+.project-title {
+    
+    font-size: 2.5rem;
+    
+    color: var(--primary-color);
+    
+    margin-bottom: 20px;
+    
+}
+
+.project-status {
+    
+    margin-bottom: 40px;
+    
+}
+
+.status-development,
+.status-planning,
+.status-future {
+    
+    display: inline-block;
+    
+    padding: 10px 18px;
+    
+    border-radius: 30px;
+    
+    font-size: .9rem;
+    
+    font-weight: 600;
+    
+}
+
+.status-development {
+    
+    background: #DCFCE7;
+    
+    color: #15803D;
+    
+}
+
+.status-planning {
+    
+    background: #FEF3C7;
+    
+    color: #B45309;
+    
+}
+
+.status-future {
+    
+    background: #DBEAFE;
+    
+    color: #1D4ED8;
+    
+}
+
+.project-layout {
+    
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+    
+    gap: 60px;
+    
+    align-items: center;
+    
+}
+
+.project-image img {
+    
+    width: 100%;
+    
+    border-radius: 18px;
+    
+    box-shadow: var(--shadow-lg);
+    
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+    
+}
+
+.project-image img:hover {
+    
+    transform: scale(1.03);
+    
+    box-shadow:
+        0 25px 55px rgba(37, 99, 235, .20);
+    
+}
+
+.project-details h3 {
+    
+    color: var(--secondary-color);
+    
+    margin-top: 30px;
+    
+    margin-bottom: 15px;
+    
+}
+
+.project-details p {
+    
+    line-height: 1.9;
+    
+}
+
+.project-skills {
+    
+    padding-left: 20px;
+    
+    margin-top: 10px;
+    
+}
+
+.project-skills li {
+    
+    margin-bottom: 12px;
+    
+}
+
+.project-buttons {
+    
+    margin-top: 40px;
+    
+    display: flex;
+    
+    gap: 20px;
+    
+}
+
