@@ -50,6 +50,8 @@ taskForm.addEventListener("submit", function(event) {
   // SUBMIT FXN
   tasks.push(task);
   
+  saveTasks();
+  
   displayTasks();
   
   updateDashboard();
@@ -86,11 +88,34 @@ function displayTasks() {
   
   tasksContainer.innerHTML = "";
   
+  
+  if (tasks.length === 0) {
+    
+    tasksContainer.innerHTML = `
+
+        <div class="empty-state">
+
+            <div class="empty-icon">📝</div>
+
+            <h3>No tasks yet</h3>
+
+            <p>
+                Start by adding your first academic task.
+            </p>
+
+        </div>
+
+    `;
+    
+    return;
+    
+}
+  
   tasks.forEach(function(task, index) {
     
     tasksContainer.innerHTML += `
 
-        <article class="task-card">
+        <article class="task-card ${task.completed ? "completed" : ""}">
 
             <div class="task-header">
 
@@ -115,27 +140,39 @@ function displayTasks() {
                 ${task.type}
 
             </p>
-
+            
             <p class="task-date">
 
-              📅 Due: ${formatDate(task.dueDate)}
+                📅 Due: ${formatDate(task.dueDate)}
 
             </p>
 
+
+            <p class="task-status ${task.completed ? "completed" : "pending"}">
+
+                ${task.completed ? "🟢 Completed" : "🟡 Pending"}
+
+            </p>
+            
+
             <div class="task-actions">
 
-                <button class="complete-btn">
+                <button
+                    class="complete-btn"
+                    onclick="toggleTask(${index})">
 
-                    ✓ Complete
+                   ${task.completed ? "↩ Reopen Task" : "✅ Complete Task"}
 
                 </button>
-
-                <button class="delete-btn">
+                
+                <button
+                    class="delete-btn"
+                    
+                    onclick="deleteTask(${index})">
 
                     🗑 Delete
 
                 </button>
-
             </div>
 
         </article>
@@ -144,6 +181,36 @@ function displayTasks() {
     
   });
   
+}
+
+
+// DELETE TASK
+
+function deleteTask(index) {
+    
+    tasks.splice(index, 1);
+    
+    saveTasks();
+    
+    displayTasks();
+    
+    updateDashboard();
+    
+}
+
+
+// TOGGLE TASK STATUS
+
+function toggleTask(index) {
+    
+    tasks[index].completed = !tasks[index].completed;
+    
+    saveTasks();
+    
+    displayTasks();
+    
+    updateDashboard();
+    
 }
 
 
@@ -164,3 +231,33 @@ function updateDashboard() {
   upcomingTasks.textContent = pending;
   
 }
+
+
+// SAVE TASKS
+
+function saveTasks() {
+    
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    
+}
+
+// LOAD TASKS
+
+function loadTasks() {
+    
+    const storedTasks = localStorage.getItem("tasks");
+    
+    if (storedTasks) {
+        
+        tasks = JSON.parse(storedTasks);
+        
+    }
+    
+}
+
+
+loadTasks();
+
+displayTasks();
+
+updateDashboard();

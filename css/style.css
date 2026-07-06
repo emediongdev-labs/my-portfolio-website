@@ -2463,3 +2463,88 @@ footer {
     background: #DC2626;
     
 }
+
+/* EMPTY STATE */
+
+.empty-state {
+    
+    max-width: 500px;
+    
+    margin: 0 auto;
+    
+    padding: 60px 40px;
+    
+    text-align: center;
+    
+    background: var(--surface-color);
+    
+    border-radius: 20px;
+    
+    box-shadow: var(--shadow-md);
+    
+}
+
+.empty-icon {
+    
+    font-size: 4rem;
+    
+    margin-bottom: 20px;
+    
+}
+
+.empty-state h3 {
+    
+    color: var(--primary-color);
+    
+    margin-bottom: 15px;
+    
+}
+
+.empty-state p {
+    
+    color: var(--light-text);
+    
+    line-height: 1.8;
+    
+}
+
+/* ==========================
+   TASK STATUS
+========================== */
+
+.task-status {
+    
+    margin: 18px 0;
+    
+    font-weight: 600;
+    
+}
+
+.task-status.completed {
+    
+    color: #16A34A;
+    
+}
+
+.task-status.pending {
+    
+    color: #CA8A04;
+    
+}
+
+/* Completed Task */
+
+.task-card.completed {
+    
+    opacity: .8;
+    
+    border-left: 6px solid #22C55E;
+    
+}
+
+.task-card.completed h3 {
+    
+    text-decoration: line-through;
+    
+}
+
