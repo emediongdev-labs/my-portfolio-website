@@ -108,6 +108,69 @@
   
 </section>  
 
+<!-- ==========================
+     PROGRESS TRACKER
+========================== -->
+
+<section id="progress-section">
+  
+  <div class="container">
+    
+    <div class="progress-card">
+      
+      <div class="progress-header">
+        
+        <h2>Study Progress</h2>
+        
+        <span id="progressText">0 of 0 tasks completed</span>
+        
+      </div>
+      
+      <div class="progress-bar">
+        
+        <div id="progressFill"></div>
+        
+      </div>
+      
+      <p id="progressPercentage">0%</p>
+      
+    </div>
+    
+  </div>
+  
+</section>
+
+<!-- ==========================
+     ACHIEVEMENT BANNER
+========================== -->
+
+<section id="achievementBanner" class="hidden">
+  
+  <div class="container">
+    
+    <div class="achievement-card">
+      
+      <div class="achievement-icon">
+        🎉
+      </div>
+      
+      <h2>Congratulations!</h2>
+      
+      <p>
+        
+        You've completed all your academic tasks.
+        
+        Keep up the excellent work!
+        
+      </p>
+      
+    </div>
+    
+  </div>
+  
+</section>
+
+
 <!-- ADD TASK-->
   
   <section id="add-task">
@@ -229,28 +292,52 @@
     
   </section>
   
-  <!-- ==========================
-     MY TASKS
-========================== -->
+  
+  
+  
+  <!-- MY TASKS -->
 
 <section id="task-list">
-  
-  <div class="container">
-    
-    <h2 class="section-title">
-      My Tasks
-    </h2>
 
-    <p class="section-subtitle">
-  Stay organized by managing your coursework, assignments, projects, and assessments.
-    </p>
-    <div id="tasksContainer">
-      
-      
-    </div>
-    
-  </div>
+    <div class="container">
+
+        <h2>My Tasks</h2>
+
+        <p class="section-subtitle">
+            Stay organized by managing your coursework, assignments, projects, and assessments.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search by course, title or task type...">
+
+        </div>
+        
+        <div class="task-filters">
   
+          <button class="filter-btn active" data-filter="all">
+            All
+          </button>
+  
+          <button class="filter-btn" data-filter="pending">
+          Pending
+          </button>
+  
+          <button class="filter-btn" data-filter="completed">
+          Completed
+          </button>
+  
+        </div>
+
+        <div id="tasksContainer">
+
+        </div>
+
+    </div>
+
 </section>
 </main>
   
