@@ -272,9 +272,9 @@ header {
     
     background: var(--surface-color);
     
-    height: 90px;
+    height: 80px;
     
-    padding: 15px 8%;
+    padding: 10px 5%;
     
     position: sticky;
     
@@ -352,9 +352,9 @@ header {
 
 .logo span {
     
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     
-    font-weight: 600;
+    font-weight: 250;
     
     color: var(--primary-color);
     
