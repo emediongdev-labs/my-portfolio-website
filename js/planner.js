@@ -24,12 +24,14 @@ const upcomingTasks = document.getElementById("upcomingTasks");
 const progressFill = document.getElementById("progressFill");
 const progressText = document.getElementById("progressText");
 const progressPercentage = document.getElementById("progressPercentage");
-const achievementBanner = document.getElementById("achievementBanner");
+const achievementToast = document.getElementById("achievementToast");
 
 // Task Array
 let tasks = [];
 
 let currentFilter = "all";
+
+let achievementShown = false;
 
 console.log("Student Academic Planner Loaded Successfully!");
 
@@ -426,7 +428,7 @@ function updateProgress() {
     
 }
 
-// UPDATE ACHIEVEMENT BANNER
+// ACHIEVEMENT TOAST
 
 function updateAchievement() {
     
@@ -438,17 +440,28 @@ function updateAchievement() {
         
     }).length;
     
-    if (total > 0 && completed === total) {
+    if (total > 0 && completed === total && !achievementShown) {
         
-        achievementBanner.classList.remove("hidden");
+        achievementShown = true;
         
-    } else {
+        achievementToast.classList.add("show");
         
-        achievementBanner.classList.add("hidden");
+        setTimeout(function() {
+            
+            achievementToast.classList.remove("show");
+            
+        }, 5000);
+        
+    }
+    
+    if (completed < total) {
+        
+        achievementShown = false;
         
     }
     
 }
+
 
 // SAVE TASKS
 
