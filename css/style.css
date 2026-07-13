@@ -690,6 +690,219 @@ header {
 
 }
 
+@media (hover: hover) {
+    
+    .hero-image img:hover {
+        
+        transform: scale(1.05) rotate(-2deg);
+        
+        box-shadow: 0 30px 70px rgba(37, 99, 235, .30);
+        
+    }
+    
+}
+
+/* Hero - Tablet */
+
+@media (max-width: 992px) {
+    
+    #hero {
+        
+        gap: 40px;
+        
+        padding: 50px 6%;
+        
+    }
+    
+    .hero-content h1 {
+        
+        font-size: 3rem;
+        
+    }
+    
+    .hero-content h3 {
+        
+        font-size: 1.35rem;
+        
+    }
+    
+    .tagline {
+        
+        font-size: 1.45rem;
+        
+    }
+    
+    .hero-image img {
+        
+        width: 300px;
+        
+        height: 300px;
+        
+    }
+    
+    .hero-image::before {
+        
+        width: 300px;
+        
+        height: 300px;
+        
+    }
+    
+}
+
+
+/* Hero - Mobile */
+
+@media (max-width: 768px) {
+    
+    #hero {
+        
+        flex-direction: column;
+        
+        text-align: center;
+        
+        gap: 45px;
+        
+        padding: 45px 7%;
+        
+    }
+    
+    .hero-content {
+        
+        order: 1;
+        
+    }
+    
+    .hero-image {
+        
+        order: 2;
+        
+    }
+    
+    .greeting {
+        
+        font-size: 1.1rem;
+        
+    }
+    
+    .hero-content h1 {
+        
+        font-size: 2.8rem;
+        
+    }
+    
+    .hero-content h3 {
+        
+        font-size: 1.3rem;
+        
+    }
+    
+    .tagline {
+        
+        font-size: 1.35rem;
+        
+    }
+    
+    .welcome-message {
+        
+        display: inline-block;
+        
+        max-width: 340px;
+        
+        padding: 14px 24px;
+        
+        font-size: 1.15rem;
+        
+    }
+    
+    .hero-buttons {
+        
+        justify-content: center;
+        
+    }
+    
+    .hero-image img {
+        
+        width: 260px;
+        
+        height: 260px;
+        
+    }
+    
+    .hero-image::before {
+        
+        width: 260px;
+        
+        height: 260px;
+        
+    }
+    
+}
+
+
+/* Hero - Small Phones */
+
+@media (max-width: 480px) {
+    
+    .hero-content h1 {
+        
+        font-size: 2.35rem;
+        
+    }
+    
+    .hero-content h3 {
+        
+        font-size: 1.15rem;
+        
+    }
+    
+    .tagline {
+        
+        font-size: 1.15rem;
+        
+    }
+    
+    .welcome-message {
+        
+        font-size: 1rem;
+        
+    }
+    
+    .hero-buttons {
+        
+        flex-direction: column;
+        
+        align-items: center;
+        
+    }
+    
+    .hero-buttons .btn {
+        
+        width: 100%;
+        
+        max-width: 280px;
+        
+    }
+    
+    .hero-image img {
+        
+        width: 220px;
+        
+        height: 220px;
+        
+    }
+    
+    .hero-image::before {
+        
+        width: 220px;
+        
+        height: 220px;
+        
+    }
+    
+}
+
+
 /* ===========================
    HIGHLIGHT CARDS
 =========================== */
