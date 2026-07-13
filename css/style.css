@@ -1026,7 +1026,7 @@ header {
     
     justify-content: space-between;
     
-    gap: 70px;
+    gap: 50px;
     
 }
 
@@ -1195,9 +1195,9 @@ header {
 
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
-    gap: 30px;
+    gap: 15px;
 
 }
 
@@ -1209,7 +1209,7 @@ header {
         #F8FAFC
     );
 
-    padding: 35px;
+    padding: 20px;
 
     border-radius: var(--border-radius);
 
@@ -1234,7 +1234,7 @@ header {
   
   font-size: 2.5rem;
   
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   
 }
 
@@ -1242,7 +1242,7 @@ header {
   
   color: var(--secondary-color);
   
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   
   font-size: 1.35rem;
   
@@ -1262,7 +1262,7 @@ header {
   
   position: relative;
   
-  padding-left: 25px;
+  padding-left: 20px;
   
 }
 
