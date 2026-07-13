@@ -1,68 +1,114 @@
-
-
-/* CSS VARIABLES */
+/* Theme Variables */
 
 :root {
-  
-  /* Brand Colours */
-  --primary-color: #0F172A;
-  --secondary-color: #2563EB;
-  --accent-color: #38BDF8;
-  
-  /* Neutral Colours */
-  --background-color: #F8FAFC;
-  --surface-color: #FFFFFF;
-  --text-color: #334155;
-  --light-text: #64748B;
-  
-  /* Status Colours */
-  --success-color: #22C55E;
-  
-  /* Typography */
-  --heading-font: "Poppins", sans-serif;
-  --body-font: "Inter", sans-serif;
-  
-  /* Shadows */
-  --shadow-sm: 0 5px 15px rgba(0, 0, 0, .06);
-  --shadow-md: 0 10px 25px rgba(0, 0, 0, .08);
-  --shadow-lg: 0 20px 45px rgba(37, 99, 235, .18);
-  
-  /* Border Radius */
-  --border-radius: 10px;
-  
-  /* Spacing */
-  --section-padding: 100px;
-  
-  /* Animation */
-  --transition: .3s ease;
-  
+    
+    /* Brand Colours */
+    --primary-color: #0F172A;
+    --secondary-color: #2563EB;
+    --accent-color: #38BDF8;
+    
+    /* Neutral Colours */
+    --background-color: #F8FAFC;
+    --surface-color: #FFFFFF;
+    --text-color: #334155;
+    --light-text: #64748B;
+    
+    /* Status Colours */
+    --success-color: #22C55E;
+    
+    /* Typography */
+    --heading-font: "Poppins", sans-serif;
+    --body-font: "Inter", sans-serif;
+    
+    /* Shadows */
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, .06);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, .08);
+    --shadow-lg: 0 20px 45px rgba(37, 99, 235, .18);
+    
+    /* Border Radius */
+    --border-radius: 10px;
+    
+    /* Layout */
+    --section-padding: 100px;
+    
+    /* Animation */
+    --transition: .3s ease;
+    
 }
 
 
-/* ==================================================
-   RESET
-   ================================================== */
+/* CSS Reset */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
 }
 
-
-/* ==================================================
-   GLOBAL STYLES
-   ================================================== */
-
 html {
-  scroll-behavior: smooth;
+    
+    scroll-behavior: smooth;
+    
 }
 
 body {
-  font-family: var(--body-font);
-  background: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.7;
+    
+    min-height: 100vh;
+    
+    text-rendering: optimizeLegibility;
+    
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+img,
+picture {
+    
+    display: block;
+    
+    max-width: 100%;
+    
+}
+
+input,
+button,
+textarea,
+select {
+    
+    font: inherit;
+    
+}
+
+a {
+    
+    text-decoration: none;
+    
+    color: inherit;
+    
+}
+
+ul,
+ol {
+    
+    list-style: none;
+    
+}
+
+
+/* Base Styles */
+
+body {
+    
+    font-family: var(--body-font);
+    
+    background: var(--background-color);
+    
+    color: var(--text-color);
+    
+    line-height: 1.7;
+    
 }
 
 h1,
@@ -71,41 +117,33 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--heading-font);
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
+    
+    font-family: var(--heading-font);
+    
+    line-height: 1.2;
+    
 }
 
 section {
-  padding: var(--section-padding) 0;
+    
+    padding: var(--section-padding) 0;
+    
 }
 
 
-/* ==================================================
-   REUSABLE COMPONENTS
-   ================================================== */
+/* Shared Components */
 
 /* Container */
 
 .container {
-  width: min(1200px, 90%);
-  margin: 0 auto;
+    
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    
 }
 
 
-/* Section Titles */
+/* Section Heading */
 
 .section-title {
     
@@ -157,158 +195,207 @@ section {
 
 .section-title.left,
 .section-subtitle.left {
-  text-align: left;
+    
+    text-align: left;
+    
 }
 
 
 /* Buttons */
 
 .btn {
-  display: inline-block;
-  padding: 16px 34px;
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease,
-    background .35s ease,
-    color .35s ease;
+    
+    display: inline-block;
+    
+    padding: 16px 34px;
+    
+    border-radius: var(--border-radius);
+    
+    font-weight: 600;
+    
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease,
+        color .35s ease;
+    
 }
 
 .btn-primary {
-  background: var(--secondary-color);
-  color: white;
+    
+    background: var(--secondary-color);
+    
+    color: #fff;
+    
 }
 
 .btn-primary:hover {
-  background: #1D4ED8;
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+    
+    background: #1D4ED8;
+    
+    transform: translateY(-5px);
+    
+    box-shadow: var(--shadow-lg);
+    
 }
 
 .btn-outline {
-  border: 2px solid var(--secondary-color);
-  color: var(--secondary-color);
+    
+    border: 2px solid var(--secondary-color);
+    
+    color: var(--secondary-color);
+    
 }
 
 .btn-outline:hover {
-  background: var(--secondary-color);
-  color: white;
+    
+    background: var(--secondary-color);
+    
+    color: #fff;
+    
 }
 
 
 /* Card Icons */
 
 .card-icon {
-  font-size: 2rem;
-  margin-bottom: 15px;
+    
+    font-size: 2rem;
+    
+    margin-bottom: 15px;
+    
+}
+
+/* Header & Navigation */
+
+header {
+    
+    background: var(--surface-color);
+    
+    height: 90px;
+    
+    padding: 15px 8%;
+    
+    position: sticky;
+    
+    top: 0;
+    
+    z-index: 1000;
+    
+    box-shadow: var(--shadow-md);
+    
 }
 
 
-/* ==================================================
-   HEADER
-   ================================================== */
+/* Navigation Bar */
 
-header {
-  background: var(--surface-color);
-  
-  height: 90px;
-  
-  padding: 15px 8%;
-  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  
-  box-shadow: var(--shadow-md);
+.navbar {
+    
+    width: 100%;
+    
+    display: flex;
+    
+    justify-content: space-between;
+    
+    align-items: center;
+    
 }
 
 
 /* Logo */
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    
+    display: flex;
+    
+    align-items: center;
+    
+    gap: 15px;
+    
 }
 
 .logo-box {
-  
-  width: 50px;
-  height: 50px;
-  
-  background: var(--secondary-color);
-  color: white;
-  
-  border-radius: var(--border-radius);
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  font-size: 22px;
-  font-weight: bold;
-  
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease;
+    
+    width: 50px;
+    
+    height: 50px;
+    
+    display: flex;
+    
+    justify-content: center;
+    
+    align-items: center;
+    
+    background: var(--secondary-color);
+    
+    color: #fff;
+    
+    border-radius: var(--border-radius);
+    
+    font-size: 22px;
+    
+    font-weight: 700;
+    
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+    
 }
 
 .logo-box:hover {
-  
-  transform: rotate(-8deg) scale(1.08);
-  
-  box-shadow: var(--shadow-lg);
-  
+    
+    transform: rotate(-8deg) scale(1.08);
+    
+    box-shadow: var(--shadow-lg);
+    
 }
 
-.logo p {
-  
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  
+.logo span {
+    
+    font-size: 1.1rem;
+    
+    font-weight: 600;
+    
+    color: var(--primary-color);
+    
 }
 
 
-/* Navigation */
+/* Navigation Links */
 
-nav ul {
-  
-  display: flex;
-  gap: 30px;
-  
+.nav-links {
+    
+    display: flex;
+    
+    gap: 30px;
+    
 }
 
-nav a {
-  
-  color: var(--text-color);
-  font-weight: 500;
-  transition: color var(--transition);
-  
+.nav-links a {
+    
+    color: var(--text-color);
+    
+    font-weight: 500;
+    
+    transition: color var(--transition);
+    
 }
 
-nav a:hover,
-nav a.active {
-  
-  color: var(--secondary-color);
-  
+.nav-links a:hover,
+.nav-links a.active {
+    
+    color: var(--secondary-color);
+    
 }
 
-nav a.active {
-  
-  font-weight: 700;
-  
+.nav-links a.active {
+    
+    font-weight: 700;
+    
 }
 
-/* ==========================
-   MOBILE MENU BUTTON
-========================== */
+
+/* Mobile Menu Button */
 
 .menu-toggle {
     
@@ -318,13 +405,13 @@ nav a.active {
     
     height: 48px;
     
+    padding: 0;
+    
     border: none;
     
     background: transparent;
     
     cursor: pointer;
-    
-    padding: 0;
     
     justify-content: center;
     
@@ -350,11 +437,16 @@ nav a.active {
     
 }
 
-@media (max-width:768px) {
+
+/* Tablet & Mobile Navigation */
+
+@media (max-width: 768px) {
     
     .menu-toggle {
         
         display: flex;
+        
+        margin-left: auto;
         
     }
     
@@ -365,6 +457,7 @@ nav a.active {
     }
     
 }
+
 
 /* ==================================================
    HERO
