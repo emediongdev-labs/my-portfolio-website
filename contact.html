@@ -1,14 +1,384 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Emediong Johnson | Portfolio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <header>
+    <div class="logo">
+      <span class="logo-box">EJ</span>
+      <p>Emediong Johnson | Portfolio</p>
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
   
-</body>
+  <main>
+    <!-- CONTACT HERO -->
+<section id="contact-hero">
+    
+    <div class="container">
+        
+        <h1>
+            Let's Build Something<br>
+    
+            <span class="hero-highlight">Amazing</span> Together
+    
+        </h1>
+        
+        <p class="hero-tagline">
+            Great software starts with
+            <span>great conversations.</span>
+    
+        </p>
+        
+        <p>
+            Whether you're looking to build a polished user experience,
+            automate complex workflows,
+            kickstart a new project,
+            explore career opportunities,
+            or simply connect, I enjoy collaborating with passionate people, innovative teams, and organizations to create meaningful digital experiences - and I'd love to hear from you.
+        </p>
+        
+        <div class="availability">
+            
+            <h3>Currently Open To</h3>
+            
+            <div class="availability-grid">
+                
+                <span>💻 Frontend Development Roles</span>
+                
+                <span>🤖 AI &amp; Automation Opportunities</span>
+                
+                <span>🖥️ Software Engineering Internships</span>
+                
+                <span>🌍 Open Source Contributions</span>
+                
+                <span>🚀 Freelance Projects</span>
+                
+                <span>🤝 Networking &amp; Collaboration</span>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</section>
 
+<!-- ==========================
+     CONTACT INFORMATION
+========================== -->
+
+<section id="contact-info">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Contact Information
+        </h2>
+
+        <p class="section-subtitle">
+            Choose the platform that's most convenient for you.
+            I'll do my best to respond as soon as possible.
+        </p>
+
+        <div class="contact-grid">
+
+            <!-- Personal Email -->
+
+            <a
+                href="mailto:emediongjohnson@gmail.com"
+                class="contact-card">
+
+                <div class="contact-icon">
+                    📧
+                </div>
+
+                <h3>Personal Email</h3>
+
+                <p>
+                    emediongjohnson@gmail.com
+                </p>
+
+            </a>
+
+            <!-- MIVA Email -->
+
+            <a
+                href="mailto:e.johnson3464@miva.edu.ng"
+                class="contact-card">
+
+                <div class="contact-icon">
+                    🎓
+                </div>
+
+                <h3>MIVA Email</h3>
+
+                <p>
+                    e.johnson3464@miva.edu.ng
+                </p>
+
+            </a>
+
+            <!-- GitHub -->
+
+            <a
+                href="https://github.com/emediongdev-labs"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-card">
+
+                <div class="contact-icon">
+                    💻
+                </div>
+
+                <h3>GitHub</h3>
+
+                <p>
+                    @emediongdev-labs
+                </p>
+
+            </a>
+
+            <!-- LinkedIn -->
+
+            <a
+                href="https://www.linkedin.com/in/emediongjohnson-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-card">
+
+                <div class="contact-icon">
+                    💼
+                </div>
+
+                <h3>LinkedIn</h3>
+
+                <p>
+                    emediongjohnson-dev
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================
+         CONTACT FORM
+    ========================== -->
+
+    <section id="contact-form-section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Send Me a Message
+            </h2>
+
+            <p class="section-subtitle">
+                Have a question, project idea, or collaboration opportunity?
+                Fill out the form below and I'll get back to you as soon as possible.
+            </p>
+
+            <form id="contactForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="name">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email address"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="subject">Subject</label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="What would you like to discuss?"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        rows="7"
+                        placeholder="Write your message here..."
+                        required></textarea>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+  
+  
+  <footer>
+    <div class="container footer-grid">
+        
+        <!-- Brand -->
+        
+        <div class="footer-brand">
+            
+            <div class="logo">
+                <span class="logo-box">EJ</span>
+            </div>
+            
+            <h3>Emediong Johnson</h3>
+            
+            <p>
+                Software Engineering Student passionate about building practical software solutions through continuous learning and innovation.
+            </p>
+            
+        </div>
+        
+        <!-- Quick Links -->
+        
+        <div class="footer-links">
+            
+            <h3>Quick Links</h3>
+            
+            <ul>
+                
+                <li><a href="index.html">Home</a></li>
+                
+                <li><a href="about.html">About</a></li>
+                
+                <li><a href="projects.html">Projects</a></li>
+                
+                <li><a href="planner.html">Planner</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+            
+        </div>
+        
+        <!-- Contact -->
+        
+        <div class="footer-contact">
+            
+            <h3>Connect</h3>
+            
+            <p>
+                <strong>Personal:</strong><br>
+                <a href="mailto:emediongjohnson@gmail.com">
+                    emediongjohnson@gmail.com
+                </a>
+            </p>
+            
+            <p>
+                <strong>MIVA:</strong><br>
+                <a href="mailto:e.johnson3464@miva.edu.ng">
+                    e.johnson3464@miva.edu.ng
+                </a>
+            </p>
+            
+            <p>
+                <strong>GitHub:</strong><br>
+                <a href="https://github.com/emediongdev-labs" target="_blank">
+                    @emediongdev-labs
+                </a>
+            </p>
+            
+            <p>
+                <strong>LinkedIn:</strong><br>
+                <a href="https://www.linkedin.com/in/emediongjohnson-dev" target="_blank">
+                    emediongjohnson-dev
+                </a>
+            </p>
+            
+        </div>
+        
+    </div>
+    
+    <div class="footer-bottom">
+        
+        <p>
+            &copy; 2026 Emediong Johnson. All Rights Reserved.
+        </p>
+        
+    </div>
+
+  </footer>
+  
+  <!-- Contact Notification -->
+
+<div id="contactNotification" class="contact-notification">
+    
+    <span id="notificationIcon"></span>
+    
+    <div>
+        
+        <h4 id="notificationTitle"></h4>
+        
+        <p id="notificationMessage"></p>
+        
+    </div>
+    
+</div>
+
+<script src="js/contact.js"></script>
+</body>
 </html>
+    
