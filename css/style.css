@@ -518,9 +518,7 @@ header {
     
 }
 
-/* ==================================================
-   HERO
-================================================== */
+/* HERO */
 
 #hero {
 
@@ -903,9 +901,7 @@ header {
 }
 
 
-/* ===========================
-   HIGHLIGHT CARDS
-=========================== */
+/* HIGHLIGHT CARDS */
 
 #highlights {
     display: flex;
@@ -913,7 +909,7 @@ header {
     flex-wrap: wrap;
     gap: 30px;
 
-    padding: 70px 8%;
+    padding: 40px 5%;
 
     background: var(--surface-color);
 }
@@ -922,7 +918,7 @@ header {
     width: 205px;
     min-height: 210px;
 
-    padding: 25px 20px;
+    padding: 15px 10px;
 
     display: flex;
     flex-direction: column;
@@ -1005,6 +1001,7 @@ header {
 
     margin: 8px 0;
 }
+
 
 /* ABOUT PREVIEW */
 
@@ -1335,11 +1332,13 @@ header {
   gap: 15px;
 }
 
-/* ACADEMIC JOURNEY */
+/* Academic Journey */
 
 #academic-highlights {
 
     background: var(--surface-color);
+
+    padding-top: 60px;
 
 }
 
@@ -1347,7 +1346,7 @@ header {
 
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
     gap: 35px;
 
@@ -1365,7 +1364,7 @@ header {
 
     border-radius: var(--border-radius);
 
-    border: 1px solid rgba(37,99,235,.08);
+    border: 1px solid rgba(37, 99, 235, .08);
 
     box-shadow: var(--shadow-md);
 
@@ -1395,9 +1394,9 @@ header {
 
     color: var(--secondary-color);
 
-    margin-bottom: 30px;
-
     font-size: 1.4rem;
+
+    margin-bottom: 30px;
 
 }
 
@@ -1417,9 +1416,9 @@ header {
 
     color: var(--primary-color);
 
-    margin-bottom: 8px;
-
     font-size: 1rem;
+
+    margin-bottom: 8px;
 
 }
 
@@ -1459,7 +1458,7 @@ header {
 
     color: var(--success-color);
 
-    font-weight: bold;
+    font-weight: 700;
 
 }
 
