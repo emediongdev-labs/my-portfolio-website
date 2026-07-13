@@ -359,7 +359,7 @@ header {
     
     font-size: 0.8rem;
     
-    font-weight: 250;
+    font-weight: 500;
     
     color: var(--primary-color);
     
@@ -1384,13 +1384,13 @@ header {
   gap: 15px;
 }
 
-/* Academic Journey */
+/* ACADEMIC HIGHLIGHTS */
 
 #academic-highlights {
 
     background: var(--surface-color);
 
-    padding-top: 60px;
+    padding-top: 40px;
 
 }
 
@@ -1400,7 +1400,7 @@ header {
 
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
-    gap: 35px;
+    gap: 25px;
 
 }
 
@@ -1412,7 +1412,7 @@ header {
         #F8FAFC
     );
 
-    padding: 35px;
+    padding: 20px;
 
     border-radius: var(--border-radius);
 
@@ -1438,7 +1438,7 @@ header {
 
     font-size: 2.5rem;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
 }
 
@@ -1446,7 +1446,7 @@ header {
 
     color: var(--secondary-color);
 
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 
     margin-bottom: 30px;
 
@@ -1454,7 +1454,7 @@ header {
 
 .academic-item {
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
 }
 
@@ -1470,7 +1470,7 @@ header {
 
     font-size: 1rem;
 
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 
 }
 
@@ -1492,7 +1492,7 @@ header {
 
     position: relative;
 
-    padding-left: 22px;
+    padding-left: 20px;
 
     margin: 10px 0;
 
