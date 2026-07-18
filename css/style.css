@@ -707,9 +707,43 @@ header {
     
     #hero {
         
+        display: flex;
+        
+        flex-direction: column;
+        
+        text-align: center;
+        
         gap: 40px;
         
         padding: 50px 6%;
+        
+    }
+    
+    .hero-content {
+        
+        display: flex;
+        
+        flex-direction: column;
+        
+        align-items: center;
+        
+    }
+    
+    .hero-image {
+        
+        order: 1;
+        
+        margin-bottom: 30px;
+        
+    }
+    
+    .hero-buttons {
+        
+        order: 2;
+        
+        justify-content: center;
+        
+        gap: 18px;
         
     }
     
