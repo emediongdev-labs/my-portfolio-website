@@ -2506,7 +2506,7 @@ footer {
     }
 }
 
-/* PROJECTS HERO */
+/* PROJECTS PAGE */
 
 #projects-hero {
 
@@ -2730,6 +2730,107 @@ footer {
     
 }
 
+/* Tablet */
+
+@media (max-width: 1024px) {
+    
+    .project-layout {
+        
+        grid-template-columns: 1fr;
+        
+        gap: 50px;
+        
+    }
+    
+    .project-image {
+        
+        order: -1;
+        
+        display: flex;
+        
+        justify-content: center;
+        
+    }
+    
+    .project-image img {
+        
+        max-width: 600px;
+        
+    }
+    
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    
+    .project-showcase {
+        
+        padding: 60px 0;
+        
+    }
+    
+    .project-layout {
+        
+        grid-template-columns: 1fr;
+        
+        gap: 35px;
+        
+    }
+    
+    .project-image {
+        
+        order: -1;
+        
+    }
+    
+    .project-image img {
+        
+        width: 100%;
+        
+        max-width: 100%;
+        
+    }
+    
+    .project-title {
+        
+        font-size: 2rem;
+        
+        text-align: center;
+        
+    }
+    
+    .project-status {
+        
+        text-align: center;
+        
+        margin-bottom: 30px;
+        
+    }
+    
+    .project-details h3 {
+        
+        margin-top: 25px;
+        
+    }
+    
+    .project-buttons {
+        
+        flex-direction: column;
+        
+        gap: 15px;
+        
+    }
+    
+    .project-buttons .btn {
+        
+        width: 100%;
+        
+        text-align: center;
+        
+    }
+    
+}
 /* ==========================
    PLANNER HERO
 ========================== */
