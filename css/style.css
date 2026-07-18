@@ -1847,59 +1847,58 @@ footer {
 /* Mobile */
 
 @media (max-width: 768px) {
-
+    
     .about-hero-grid {
-
+        
         gap: 40px;
-
+        
     }
-
+    
     .about-hero-content h1 {
-
+        
         font-size: 2.2rem;
-
-        text-align: left;
-
+        
+        text-align: center;
+        
     }
-
+    
     .page-intro {
-
+        
         text-align: center;
-
+        
     }
-
+    
     .story-grid {
-
+        
         flex-direction: column-reverse;
-
+        
         gap: 40px;
-
+        
     }
-
+    
     .story-content h2 {
-
+        
         text-align: center;
-
+        
     }
-
+    
     .story-content p {
-
-        text-align: justify;
-
-        text-justify: inter-word;
-
+        
+        text-align: left;
+        
     }
-
+    
     .story-image {
-
+        
         display: flex;
         justify-content: center;
-
+        
         margin-top: 20px;
-
+        
     }
-
+    
 }
+
 
 /* EDUCATION */
 
@@ -2036,9 +2035,7 @@ footer {
     
 }
 
-/* ==========================
-   TECHNICAL JOURNEY
-========================== */
+/* TECHNICAL JOURNEY */
 
 #technical-journey {
 
@@ -2148,9 +2145,7 @@ footer {
     
 }
 
-/* ==========================
-   CERTIFICATIONS
-========================== */
+/* CERTIFICATIONS */
 
 #certifications {
     
@@ -2234,9 +2229,7 @@ footer {
     
 }
 
-/* ==========================
-   CAREER VISION
-========================== */
+/* CAREER VISION */
 
 #career-vision {
 
@@ -2362,9 +2355,7 @@ footer {
     
 }
 
-/* ==========================
-   INTERESTS
-========================== */
+/* INTERESTS */
 
 #interests {
 
