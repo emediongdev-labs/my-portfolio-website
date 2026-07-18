@@ -3808,13 +3808,14 @@ footer {
    CONTACT HERO
 ========================== */
 
-#contact-hero{
+#contact-hero {
 
     position: relative;
 
     overflow: hidden;
 
-    padding: 100px 0 80px;
+    padding-top: 40px;
+    padding-bottom: 70px;
 
     text-align: center;
 
@@ -4245,6 +4246,67 @@ footer {
     width: 100%;
     
     margin-top: 10px;
+    
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:1024px) {
+    
+    .contact-grid {
+        
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px) {
+    
+    #contact-hero {
+        
+        padding-top: 40px;
+        padding-bottom: 60px;
+        
+    }
+    
+    #contact-hero h1 {
+        
+        font-size: 2.5rem;
+        
+    }
+    
+    .hero-tagline {
+        
+        font-size: 1.15rem;
+        
+    }
+    
+    .availability {
+        
+        margin-top: 35px;
+        
+    }
+    
+    .contact-grid {
+        
+        grid-template-columns: 1fr;
+        
+        gap: 24px;
+        
+    }
+    
+    .contact-card {
+        
+        padding: 32px 24px;
+        
+    }
     
 }
 
