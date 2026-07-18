@@ -2831,136 +2831,213 @@ footer {
     }
     
 }
+
 /* ==========================
    PLANNER HERO
 ========================== */
 
-#planner-hero{
-    padding:100px 0 60px;
-    text-align:center;
+#planner-hero {
 
-    background:linear-gradient(
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    background: linear-gradient(
         135deg,
         #F8FAFC,
         #EEF4FF,
         #FFFFFF
     );
-}
 
-#planner-hero h1{
-
-    color:var(--primary-color);
-
-    font-size:3rem;
-
-    margin-bottom:20px;
+    text-align: center;
 
 }
 
-#planner-hero p{
+#planner-hero h1 {
 
-    max-width:700px;
+    color: var(--primary-color);
 
-    margin:auto;
+    font-size: 3rem;
 
-    color:var(--light-text);
-
-    font-size:1.1rem;
-
-    line-height:1.8;
+    margin-bottom: 20px;
 
 }
+
+#planner-hero p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: var(--light-text);
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+}
+
 
 /* ==========================
    DASHBOARD
 ========================== */
 
-#planner-dashboard{
+#planner-dashboard {
+    
+    padding-top: 10px;
+    padding-bottom: 25px;
+    
+    background: var(--background-color);
+    
+}
 
-    padding:60px 0;
+.dashboard-grid {
 
-    background:var(--background-color);
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 24px;
 
 }
 
-.dashboard-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-    gap:30px;
-
-}
-
-.dashboard-card{
-
-    background:var(--surface-color);
-
-    padding:35px;
-
-    border-radius:var(--border-radius);
-
-    text-align:center;
-
-    box-shadow:var(--shadow-md);
-
+.dashboard-card {
+    
+    background: var(--surface-color);
+    
+    padding: 22px 24px;
+    
+    border-radius: 18px;
+    
+    border: 1px solid rgba(37, 99, 235, .08);
+    
+    text-align: center;
+    
+    box-shadow: var(--shadow-md);
+    
     transition:
         transform .35s ease,
         box-shadow .35s ease;
-
+    
 }
 
-.dashboard-card:hover{
+.dashboard-card:hover {
 
-    transform:translateY(-8px);
+    transform: translateY(-8px);
 
-    box-shadow:var(--shadow-lg);
-
-}
-
-.dashboard-card h3{
-
-    color:var(--secondary-color);
-
-    margin-bottom:15px;
-
-}
-
-.dashboard-card p{
-
-    font-size:2.2rem;
-
-    font-weight:700;
-
-    color:var(--primary-color);
+    box-shadow: var(--shadow-lg);
 
 }
 
 .dashboard-icon {
-    
-    font-size: 2.6rem;
-    
-    margin-bottom: 18px;
-    
-    transition:
-        transform .35s ease;
-    
+
+    font-size: 2.3rem;
+
+    margin-bottom: 12px;
+
+    transition: transform .35s ease;
+
 }
 
 .dashboard-card:hover .dashboard-icon {
+
+    transform: scale(1.12);
+
+}
+
+.dashboard-card h3 {
     
-    transform: scale(1.15);
+    color: var(--secondary-color);
+    
+    margin-bottom: 8px;
+    
+    font-size: 1.5rem;
     
 }
 
+
+.dashboard-card p {
+    
+    font-size: 1.8rem;
+    
+    font-weight: 700;
+    
+    color: var(--primary-color);
+    
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 1024px) {
+
+    .dashboard-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 24px;
+
+    }
+
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+    .dashboard-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+    }
+
+    .dashboard-card {
+
+        padding: 24px 20px;
+
+    }
+
+    .dashboard-icon {
+
+        font-size: 2.2rem;
+
+    }
+
+    .dashboard-card h3 {
+
+        font-size: 1.4rem;
+
+    }
+
+    .dashboard-card p {
+
+        font-size: 1.8rem;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .dashboard-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
 /* ==========================
    PROGRESS TRACKER
 ========================== */
 
 #progress-section {
 
-    padding: 40px 0;
+    padding: 30px 0;
 
     background: var(--background-color);
 
@@ -3128,12 +3205,12 @@ footer {
    ADD TASK
 ========================== */
 
-#add-task{
-
-    padding:100px 0;
-
-    background:#fff;
-
+#add-task {
+    
+    padding: var(--section-padding) 0;
+    
+    background: var(--surface-color);
+    
 }
 
 #add-task h2{
@@ -3227,7 +3304,7 @@ footer {
     
     max-width: 700px;
     
-    margin: 40px auto 50px;
+    margin: 35px auto 45px;
     
 }
 
@@ -3271,7 +3348,7 @@ footer {
     
     gap: 15px;
     
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     
     flex-wrap: wrap;
     
@@ -3324,12 +3401,12 @@ footer {
    TASK LIST
 ========================== */
 
-#task-list{
-
-    padding:100px 0;
-
-    background:var(--background-color);
-
+#task-list {
+    
+    padding: var(--section-padding) 0;
+    
+    background: var(--background-color);
+    
 }
 
 #task-list h2{
@@ -3360,15 +3437,13 @@ footer {
     
     background: var(--surface-color);
     
-    padding: 30px;
+    padding: 32px;
     
     border-radius: 18px;
     
     border: 1px solid rgba(37, 99, 235, .08);
     
-
     border-left: 6px solid var(--secondary-color);
-    
     
     box-shadow: var(--shadow-md);
     
@@ -3567,14 +3642,6 @@ footer {
     
     gap: 15px;
     
-}
-
-.task-actions {
-    
-    display: flex;
-    
-    gap: 15px;
-    
     margin-top: 25px;
     
 }
@@ -3658,12 +3725,6 @@ footer {
     margin: 18px 0;
     
     font-weight: 600;
-    
-}
-
-.task-status.completed {
-    
-    color: #16A34A;
     
 }
 
