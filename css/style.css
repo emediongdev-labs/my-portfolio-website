@@ -756,11 +756,13 @@ header {
     
     #hero {
         
+        display: flex;
+        
         flex-direction: column;
         
         text-align: center;
         
-        gap: 45px;
+        gap: 35px;
         
         padding: 45px 7%;
         
@@ -768,13 +770,11 @@ header {
     
     .hero-content {
         
-        order: 1;
+        display: flex;
         
-    }
-    
-    .hero-image {
+        flex-direction: column;
         
-        order: 2;
+        align-items: center;
         
     }
     
@@ -812,11 +812,29 @@ header {
         
         font-size: 1.15rem;
         
+        margin-bottom: 30px;
+        
+    }
+    
+    /* Move image above buttons */
+    
+    .hero-image {
+        
+        order: 1;
+        
+        margin-bottom: 30px;
+        
     }
     
     .hero-buttons {
         
+        order: 2;
+        
+        display: flex;
+        
         justify-content: center;
+        
+        gap: 18px;
         
     }
     
@@ -865,13 +883,25 @@ header {
         
         font-size: 1rem;
         
+        margin-bottom: 25px;
+        
+    }
+    
+    .hero-image {
+        
+        margin-bottom: 25px;
+        
     }
     
     .hero-buttons {
         
+        order: 2;
+        
         flex-direction: column;
         
         align-items: center;
+        
+        gap: 16px;
         
     }
     
@@ -900,7 +930,6 @@ header {
     }
     
 }
-
 
 /* HIGHLIGHT CARDS */
 
