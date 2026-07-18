@@ -36,6 +36,27 @@
     
 }
 
+/* Responsive Layout Variables */
+
+@media (max-width: 1024px) {
+    
+    :root {
+        
+        --section-padding: 80px;
+        
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    :root {
+        
+        --section-padding: 60px;
+        
+    }
+    
+}
 
 /* CSS Reset */
 
@@ -130,6 +151,13 @@ section {
     
 }
 
+/* First section on every page */
+.first-section {
+    
+    padding-top: 40px;
+    padding-bottom: var(--section-padding);
+    
+}
 
 /* Shared Components */
 
@@ -147,33 +175,13 @@ section {
 
 .section-title {
     
-    text-align: center;
+    margin-bottom: 18px;
     
     color: var(--secondary-color);
     
     font-size: 2.7rem;
     
-    margin-bottom: 18px;
-    
-    position: relative;
-    
-}
-
-.section-title::after {
-    
-    content: "";
-    
-    display: block;
-    
-    width: 70px;
-    
-    height: 5px;
-    
-    margin: 18px auto 0;
-    
-    background: var(--secondary-color);
-    
-    border-radius: 999px;
+    text-align: center;
     
 }
 
@@ -183,13 +191,13 @@ section {
     
     margin: 0 auto 55px;
     
-    text-align: center;
-    
     color: var(--light-text);
     
     font-size: 1.1rem;
     
     line-height: 1.8;
+    
+    text-align: center;
     
 }
 
@@ -197,12 +205,6 @@ section {
 .section-subtitle.left {
     
     text-align: left;
-    
-}
-
-.section-title.left::after {
-    
-    display: none;
     
 }
 
@@ -1649,9 +1651,11 @@ footer {
 }
 
 
-/* ABOUT HERO */
+/* About Hero */
 
 #about-hero {
+
+    padding-bottom: var(--section-padding);
 
     background: linear-gradient(
         135deg,
@@ -1665,12 +1669,9 @@ footer {
 .about-hero-grid {
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
-    gap: 80px;
+    gap: 50px;
 
 }
 
@@ -1680,49 +1681,29 @@ footer {
 
 }
 
-.page-tag {
-
-    display: inline-block;
-
-    padding: 8px 18px;
-
-    background: rgba(37,99,235,.08);
-
-    color: var(--secondary-color);
-
-    border-radius: 30px;
-
-    font-size: .9rem;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 20px;
-
-}
-
 .about-hero-content h1 {
 
-    font-size: 3.5rem;
+    max-width: 550px;
 
-    line-height: 1.2;
+    margin-bottom: 25px;
 
     color: var(--primary-color);
 
-    margin-bottom: 25px;
+    font-size: 2.5rem;
+
+    line-height: 1.2;
 
 }
 
 .page-intro {
 
-    max-width: 650px;
+    max-width: 520px;
 
     color: var(--text-color);
 
-    line-height: 1.9;
-
     font-size: 1.1rem;
+
+    line-height: 1.9;
 
 }
 
@@ -1731,20 +1712,21 @@ footer {
     flex: 1;
 
     display: flex;
-
     justify-content: center;
 
 }
 
 .about-hero-image img {
 
-    width: 400px;
+    width: 320px;
 
     border-radius: 20px;
 
     box-shadow: var(--shadow-lg);
 
-    transition: .4s ease;
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
 
 }
 
@@ -1754,82 +1736,172 @@ footer {
 
 }
 
-/* MY STORY */
+
+/* My Story */
 
 #my-story {
-    
+
     background: var(--surface-color);
-    
+
 }
 
 .story-grid {
-    
+
     display: flex;
-    
     align-items: center;
-    
     gap: 80px;
-    
+
 }
 
 .story-image {
-    
+
     flex: 1;
-    
+
 }
 
 .story-image img {
-    
+
     width: 100%;
-    
     max-width: 420px;
-    
+
     border-radius: 20px;
-    
+
     box-shadow: var(--shadow-lg);
-    
+
     transition:
         transform .4s ease,
         box-shadow .4s ease;
-    
+
 }
 
 .story-image img:hover {
-    
+
     transform: scale(1.03);
-    
-    box-shadow:
-        0 25px 55px rgba(37, 99, 235, .20);
-    
+
+    box-shadow: 0 25px 55px rgba(37, 99, 235, .20);
+
 }
 
 .story-content {
-    
+
     flex: 1.3;
-    
+
 }
 
 .story-content p {
-    
+
     margin-bottom: 20px;
-    
-    line-height: 1.9;
-    
+
     color: var(--text-color);
-    
+
     font-size: 1.05rem;
-    
+
+    line-height: 1.9;
+
+    text-align: justify;
+
+    text-justify: inter-word;
+
 }
 
 .story-content p:last-child {
-    
+
     margin-bottom: 0;
-    
+
 }
 
-/* ==========================
-   EDUCATION
-========================== */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .about-hero-grid,
+    .story-grid {
+
+        flex-direction: column;
+
+        gap: 50px;
+
+        text-align: center;
+
+    }
+
+    .about-hero-content h1,
+    .page-intro {
+
+        max-width: 100%;
+        margin-inline: auto;
+
+    }
+
+    .story-image {
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about-hero-grid {
+
+        gap: 40px;
+
+    }
+
+    .about-hero-content h1 {
+
+        font-size: 2.2rem;
+
+        text-align: center;
+
+    }
+
+    .page-intro {
+
+        text-align: center;
+
+    }
+
+    .story-grid {
+
+        flex-direction: column-reverse;
+
+        gap: 40px;
+
+    }
+
+    .story-content h2 {
+
+        text-align: center;
+
+    }
+
+    .story-content p {
+
+        text-align: justify;
+
+        text-justify: inter-word;
+
+    }
+
+    .story-image {
+
+        display: flex;
+        justify-content: center;
+
+        margin-top: 20px;
+
+    }
+
+}
+
+/* EDUCATION */
 
 #education {
     
@@ -1950,6 +2022,20 @@ footer {
     
 }
 
+@media (max-width: 480px) {
+    
+    .education-item {
+        
+        flex-direction: column;
+        
+        gap: 8px;
+        
+        align-items: flex-start;
+        
+    }
+    
+}
+
 /* ==========================
    TECHNICAL JOURNEY
 ========================== */
@@ -1961,15 +2047,14 @@ footer {
 }
 
 .journey-grid {
-
+    
     display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
+    
+    grid-template-columns: repeat(4, 1fr);
+    
     gap: 30px;
-
+    
 }
-
 .journey-card {
 
     background: linear-gradient(
@@ -2037,6 +2122,30 @@ footer {
 
     line-height: 1.8;
 
+}
+
+/* Laptop & Tablet */
+
+@media (max-width: 1024px) {
+    
+    .journey-grid {
+        
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    
+    .journey-grid {
+        
+        grid-template-columns: 1fr;
+        
+    }
+    
 }
 
 /* ==========================
@@ -2180,13 +2289,13 @@ footer {
 }
 
 .vision-goals {
-
+    
     display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-
+    
+    grid-template-columns: repeat(4, 1fr);
+    
     gap: 25px;
-
+    
 }
 
 .vision-goal {
@@ -2227,6 +2336,30 @@ footer {
 
     line-height: 1.7;
 
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    
+    .vision-goals {
+        
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    
+    .vision-goals {
+        
+        grid-template-columns: 1fr;
+        
+    }
+    
 }
 
 /* ==========================
@@ -2311,6 +2444,75 @@ footer {
 
     line-height: 1.8;
 
+}
+
+@media (max-width: 1024px) {
+    
+    .about-hero-grid,
+    .story-grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+    
+    .page-intro,
+    .story-content {
+        max-width: 100%;
+    }
+    
+    .about-hero-image,
+    .story-image {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+.story-grid {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+@media (max-width: 768px) {
+    
+    .story-grid {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+    
+    .story-content {
+        width: 100%;
+    }
+    
+    .story-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .story-image img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .story-content h2 {
+        text-align: center;
+    }
+    
+    .story-content p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .story-image {
+        margin-top: 20px;
+    }
 }
 
 /* PROJECTS HERO */
